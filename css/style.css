@@ -11,6 +11,21 @@ body{
 	margin: 0;
 }
 
+/*Start Back To Top*/
+.btn-backtotops{
+	background-color: var(--primary-color);
+	color: #fff;
+	padding: 10px;
+	border-radius: 10px;
+
+	position: absolute;
+	right:10px;
+	bottom: 10px;
+
+	z-index: 100;
+}
+/*End Back To Top*/
+
 /*Start Header	*/
 
 header{
@@ -292,7 +307,36 @@ header{
 .servicecards{
 	position: relative;
 
+	white-space: pre-wrap;
+
 	overflow: hidden;
+}
+
+.servicecards::before{
+	content: 'You may need our services ? \A Try and update your living environment ! \A \f004  \f004  \f004';
+	font-family: "Font Awesome 5 Free";
+
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0,0.4);
+	color: #fff;
+	text-align: center;
+	line-height: 2;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	z-index: 1;
+}
+
+.servicecards:hover::before{
+	content: '';
+	background-color: rgba(0,0,0,0.1);
 }
 
 
@@ -317,7 +361,218 @@ header{
 	position: absolute;
 	right: 0;
 	top: 80%;
-
 }
 
+
 /*End Our Services*/
+
+
+/*Start Client*/
+
+ul.clientlists{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+
+	display: flex;
+	justify-content: center;
+}
+
+ul.clientlists li{
+	background-color: #f4f4f4;
+	border: 5px solid #e9e9e9;
+
+	padding: 10px 20px;
+	margin: auto;
+}
+
+ul.clientlists img{
+	width: 100px;
+}
+
+ul.clientlists li:hover{
+	border-color: var(--secondary-color);
+	box-shadow: 1px -2px 0 rgba(0,0,0,0.3);
+}
+
+/*@media(max-width:768px){
+
+    ul.clientslists li{
+        border: 2px solid #e9e9e9;
+        padding: 10px 20px;
+        margin: 0 5px;
+    }
+
+    ul.clientslists img{
+        width: 70px;
+    }
+
+    ul.clientslists li:hover{
+        box-shadow: 1px -2px 0 rgba(0, 0, 0, 0.3);
+    }
+}*/
+
+
+/*End Client*/
+
+
+/*Start Customers*/
+.customers{
+	background: linear-gradient(
+			rgba(0,0,0,0),
+			rgba(0,0,0,0.3)
+		),url(../assests/img/banner/banner3.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+/*End Customers*/
+
+
+/*Start Request Quote*/
+
+.qutoes{
+	background-color: var(--secondary-color);
+	padding: 30px 50px;
+	margin: -30px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.qutoes .infos{
+	display: flex;
+}
+
+.qutoes .btn-calls{
+	width: 170px;
+	height: 50px;
+	background-color: var(--primary-color);
+	color: #fff;
+
+	font-family: sans-serif;
+	font-size: 15px;
+	line-height: 50px;
+	border: none;
+	border-radius: 100px;
+	padding: 0; /*cuz of bootstrap btn effect*/
+
+	transform: translateY(-1px);
+
+	transition:all .3s;
+}
+
+.qutoes .btn-calls:hover{
+	box-shadow: -3px 3px 3px #444;
+	transform: translate(0px);
+}
+
+.phoneicon{
+	width: 30px;
+}
+
+@media(max-width: 768px){
+	.phoneicon{
+		width: 50px;
+	}
+}
+
+/*End Request Quote*/
+
+/*Start Furniture Services*/
+
+.furicons img{
+	width: 70px;
+}
+
+.furicons div:nth-of-type(even){
+	background-color: #f1f1f1;
+}
+
+
+/*End  Furniture Services*/
+
+
+/*Start Contact*/
+.contacts{
+	background-image: linear-gradient(
+			100deg,
+			rgba(0,0,0,0.9) 50%,
+			rgba(0,0,0,0.5) 30%,
+			transparent 70%
+		),url(./../assests/img/banner/banner3.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.contacts .inputs{
+	background: transparent;
+	border-color: transparent;
+	border-bottom: 2px solid #ccc;
+	border-radius: 0;
+	color: #fff;
+
+	transition: all .8s;
+}
+
+.contacts .inputs:focus{
+	box-shadow: none;
+	border-bottom: 2px solid var(--primary-color);
+}
+
+.submit-btns{
+	background-color: var(--primary-color);
+	color: #fff;
+	border: none;
+
+	transition: all.3s;
+}
+
+.submit-btns:hover{
+	background-color: var(--secondary-color);
+	color: #fff;
+}
+
+.labels{
+	color: #e2e2e2;
+	display: block;
+	margin-top: -60px;
+	margin-left: 10px;
+
+	transition: all .5s;
+}
+
+
+.inputs:placeholder-shown + .labels{
+	opacity: 0;
+	/*visibility: hidden;*/
+	transform: translateY(20px);
+	
+}
+
+/*End Contact*/
+
+
+
+/*Start Footer*/
+
+.footerlinks{
+	color: #e2e2e2;
+	text-decoration: none;
+	font-size: 13px;
+
+	transition: all .3s;
+}
+
+.footerlinks:hover{
+	color: orange;
+	border-bottom: 1px solid orange;
+	letter-spacing: 1px;
+}
+
+/*End Footer*/

@@ -1,5 +1,20 @@
 $(document).ready(function(){
 
+	// Start Back To Top
+		$(".btn-backtotops").hide();
+		$(window).scroll(function(){
+			let	 getscrolltop = $(this).scrollTop();
+			// console.log(getscrolltop);
+
+			if(getscrolltop >= 370){
+				$(".btn-backtotops").fadeIn(1000);
+			}else{
+				$(".btn-backtotops").fadeOut(1000);
+			}
+
+		});
+	// End  Back To Top
+
 
 	// Start Header
 
@@ -77,15 +92,22 @@ $(document).ready(function(){
 		// console.log(getscrolltop);
 
 		if(getscrolltop >= 900){
-			$(".advimages").addClass(".fromlefts");
-			$(".advtexts").addClass(".fromrights");
+			$(".advimages").addClass("fromlefts");
+			$(".advtexts").addClass("fromrights");
 		}else{
-			$(".advimages").removeClass(".fromlefts");
-			$(".advtexts").removeClass(".fromrights");
+			$(".advimages").removeClass("fromlefts");
+			$(".advtexts").removeClass("fromrights");
 		}
 	});
 
 	// End Adv
+
+
+	// Start Footer
+	const getyear = $("#getyear");
+	const getfullyear = new Date().getUTCFullYear();
+	getyear.text(getfullyear);
+	// End Footer
 
 
 
